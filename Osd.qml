@@ -2,7 +2,6 @@ WebItem {
 	property bool active: false;
 	anchors.fill: parent;
 	opacity: active ? 1.0 : 0.0;
-	focus: true;
 
 	IssProtocol { id: protocol; }
 
