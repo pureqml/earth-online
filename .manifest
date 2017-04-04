@@ -1,0 +1,6 @@
+{
+	"name": "earth-online",
+	"platforms": ["web"],
+	"apps": {"app": "index"},
+	"minify": true
+}
