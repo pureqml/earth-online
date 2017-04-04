@@ -19,7 +19,6 @@ WebItem {
 		anchors.bottom: parent.bottom;
 		anchors.margins: 10;
 		font.pixelSize: 24;
-		font.family: "Space Mono";
 		color: "#fff";
 		text: "Earth visibility: -";
 	}
@@ -30,7 +29,6 @@ WebItem {
 		anchors.bottom: parent.bottom;
 		anchors.margins: 10;
 		font.pixelSize: 24;
-		font.family: "Space Mono";
 		color: "#fff";
 		text: "Lon: -<br>Lat: -";
 	}
