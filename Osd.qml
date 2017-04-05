@@ -2,20 +2,18 @@ WebItem {
 	property bool active: false;
 	anchors.fill: parent;
 	opacity: active ? 1.0 : 0.0;
-	focus: true;
 
 	IssProtocol { id: protocol; }
 
 	Rectangle {
 		anchors.fill: parent;
-		color: "#000";
-		opacity: 0.5;
+		color: "#000c";
 	}
 
 	IssMap { id: map; }
 
 	Text {
-		id: hintText;
+		id: visibilityText;
 		anchors.right: parent.right;
 		anchors.bottom: parent.bottom;
 		anchors.margins: 10;
@@ -47,7 +45,7 @@ WebItem {
 		var long = parseFloat(data.longitude)
 		var lat = parseFloat(data.latitude)
 		positionText.text = "Lon: " + Number((long).toFixed(1)) + "<br>Lat: " + Number((lat).toFixed(1))
-		hintText.text = "Earth visibility: " + data.visibility
+		visibilityText.text = "Earth visibility: " + data.visibility
 		map.setPos(long, lat)
 	}
 
@@ -61,9 +59,6 @@ WebItem {
 				log("Request error")
 		})
 	}
-
-	hide: { this.active = false }
-	show: { this.active = true }
 
 	Behavior on opacity { Animation { duration: 300; } }
 }

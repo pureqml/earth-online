@@ -7,11 +7,6 @@ Item {
 	}
 
 	Osd {
-		onClicked: {
-			if (this.active)
-				this.hide()
-			else
-				this.show()
-		}
+		onClicked: { this.active = !this.active }
 	}
 }
