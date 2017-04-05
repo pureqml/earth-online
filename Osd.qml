@@ -5,11 +5,6 @@ WebItem {
 
 	IssProtocol { id: protocol; }
 
-	Rectangle {
-		anchors.fill: parent;
-		color: "#000c";
-	}
-
 	IssMap { id: map; }
 
 	Text {
