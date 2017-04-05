@@ -10,14 +10,29 @@ Item {
 			x: -width;
 			y: -height;
 			width: 30;
-			height: 30;
+			height: width;
 			radius: width / 2;
 			color: "red";
 		}
 	}
 
 	setPos(long, lat): {
-		station.x = (long + 180) * this.width / 360 - (this.width / 28.4)
-		station.y = (90 - lat) * this.height / 180 + (this.height / 19.45)
+		var w = this.width
+		var h = this.height
+
+		var earthLong = 360
+		var earthLat = 180
+
+		var x = long + earthLong / 2
+		var y = earthLat / 2 - lat
+
+		x *= w / earthLong
+		y *= h / earthLat
+
+		x -= w / 28.4
+		y += h / 19.45
+
+		station.x = x
+		station.y = y
 	}
 }
