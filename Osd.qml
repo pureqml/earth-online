@@ -2,6 +2,7 @@ WebItem {
 	property bool active: false;
 	anchors.fill: parent;
 	opacity: active ? 1.0 : 0.0;
+	focus: true;
 
 	IssProtocol { id: protocol; }
 
@@ -11,7 +12,7 @@ WebItem {
 		opacity: 0.5;
 	}
 
-	IssMap { id: map; anchors.centerIn: parent; }
+	IssMap { id: map; }
 
 	Text {
 		id: hintText;
