@@ -3,16 +3,18 @@ Item {
 
 	Image {
 		anchors.fill: parent;
+		fillMode: Image.Stetch;
 		source: "res/map.png";
 
 		Rectangle {
 			id: station;
-			x: -width;
-			y: -height;
 			width: 30;
 			height: width;
 			radius: width / 2;
 			color: "red";
+			visible: false;
+
+			Behavior on x, y { Animation { duration: 10000; easing: "linear"; } }
 		}
 	}
 
@@ -32,6 +34,7 @@ Item {
 		x -= w / 28.4
 		y += h / 19.45
 
+		station.visible = true
 		station.x = x
 		station.y = y
 	}
