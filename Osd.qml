@@ -3,7 +3,7 @@ WebItem {
 	anchors.fill: parent;
 	opacity: active ? 1.0 : 0.0;
 
-	IssProtocol { id: protocol; }
+	IssRequest { id: request; }
 
 	IssMap { id: map; }
 
@@ -46,7 +46,7 @@ WebItem {
 
 	updatePositionRequest: {
 		var self = this
-		protocol.request(function(res) {
+		request.call(function(res) {
 			var data = JSON.parse(res.target.response)
 			if (data)
 				self.doUpdatePosition(data)

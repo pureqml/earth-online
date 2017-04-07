@@ -1,7 +1,7 @@
 Item {
 	anchors.fill: context;
 
-	Youtube {
+	YouTube {
 		anchors.fill: parent;
 		source: "https://www.youtube.com/embed/ddFvjfvPnqk?autoplay=1&controls=0&showinfo=0";
 	}

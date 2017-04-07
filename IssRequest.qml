@@ -1,8 +1,8 @@
-Protocol {
-	request(callback): {
-		this.requestXHR({
+Request {
+	call(callback): {
+		this.ajax({
 			url: "https://api.wheretheiss.at/v1/satellites/25544",
-			callback: callback,
+			done: callback,
 			withCredentials: true
 		})
 	}
