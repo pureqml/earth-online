@@ -13,8 +13,6 @@ Item {
 			radius: width / 2;
 			color: "red";
 			visible: false;
-
-			Behavior on x, y { Animation { duration: 10000; easing: "linear"; } }
 		}
 	}
 
@@ -34,8 +32,8 @@ Item {
 		x -= w / 28.4
 		y += h / 19.45
 
-		station.visible = true
 		station.x = x
 		station.y = y
+		station.visible = true
 	}
 }
