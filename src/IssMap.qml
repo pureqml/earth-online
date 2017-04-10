@@ -1,5 +1,5 @@
 Item {
-	anchors.fill: context;
+	anchors.fill: parent;
 
 	Image {
 		anchors.fill: parent;

@@ -1,21 +1,16 @@
-WebItem {
+Item {
+	id: osdProto;
 	property bool active: false;
-	anchors.fill: parent;
+	property bool mobile: context.system.device == System.Mobile;
+	width: mobile && !active ? 50 : context.width;
+	height: mobile && !active ? 50 : context.height;
+	anchors.top: parent.top;
+	anchors.left: parent.left;
 	opacity: active ? 1.0 : 0.0;
 
 	IssRequest { id: request; }
 
 	IssMap { id: map; }
-
-	Text {
-		id: visibilityText;
-		anchors.right: parent.right;
-		anchors.bottom: parent.bottom;
-		anchors.margins: 10;
-		font.pixelSize: 24;
-		color: "#fff";
-		text: "Earth visibility: -";
-	}
 
 	Text {
 		id: positionText;
@@ -24,7 +19,7 @@ WebItem {
 		anchors.margins: 10;
 		font.pixelSize: 24;
 		color: "#fff";
-		text: "Lon: -<br>Lat: -";
+		text: "Lon: -<br>Lat: -<br>Visibility: -";
 	}
 
 	Timer {
@@ -40,7 +35,7 @@ WebItem {
 		var long = parseFloat(data.longitude)
 		var lat = parseFloat(data.latitude)
 		positionText.text = "Lon: " + Number((long).toFixed(1)) + "<br>Lat: " + Number((lat).toFixed(1))
-		visibilityText.text = "Earth visibility: " + data.visibility
+		positionText.text += "<br>Visibility: " + data.visibility
 		map.setPos(long, lat)
 	}
 
@@ -55,5 +50,5 @@ WebItem {
 		})
 	}
 
-	Behavior on opacity { Animation { duration: 300; } }
+	Behavior on opacity { Animation { duration: osdProto ? 0 : 300; } }
 }
