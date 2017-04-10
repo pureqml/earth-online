@@ -1,4 +1,4 @@
-Item {
+WebItem {
 	id: osdProto;
 	property bool active: false;
 	property bool mobile: context.system.device == System.Mobile;
