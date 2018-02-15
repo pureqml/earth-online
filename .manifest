@@ -1,7 +1,9 @@
 {
-	"name": "earth-online",
 	"platforms": ["web"],
-	"properties.style.font": { "family": "Space Mono" },
+	"properties": {
+		"title": "earth-online",
+		"style.font": { "family": "Space Mono" }
+	},
 	"apps": {"app": "index"},
 	"minify": true
 }
