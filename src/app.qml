@@ -1,5 +1,6 @@
 Item {
 	anchors.fill: context;
+	focus: true;
 
 	YouTube {
 		anchors.fill: parent;
@@ -8,9 +9,11 @@ Item {
 
 	Osd {
 		id: osd;
+		focus: active;
 
 		toggleActive: { osd.active = !osd.active }
 		onClicked: { this.toggleActive() }
+		onBackPressed: { osd.active = false }
 	}
 
 	WebItem {
@@ -27,4 +30,6 @@ Item {
 
 		onClicked: { osd.toggleActive() }
 	}
+
+	onSelectPressed: { osd.toggleActive() }
 }
