@@ -5,5 +5,6 @@
 		"style.font": { "family": "Space Mono" }
 	},
 	"apps": {"app": "index"},
+	"templater": "jinja2",
 	"minify": true
 }
