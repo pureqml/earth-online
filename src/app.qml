@@ -9,11 +9,9 @@ Item {
 
 	Osd {
 		id: osd;
-		focus: active;
 
 		toggleActive: { osd.active = !osd.active }
 		onClicked: { this.toggleActive() }
-		onBackPressed: { osd.active = false }
 	}
 
 	WebItem {
@@ -32,4 +30,11 @@ Item {
 	}
 
 	onSelectPressed: { osd.toggleActive() }
+
+	onBackPressed: {
+		if (osd.active)
+			osd.toggleActive()
+		else
+			_globals.closeApp()
+	}
 }
