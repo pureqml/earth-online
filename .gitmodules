@@ -7,3 +7,6 @@
 [submodule "smart-tv-deployer"]
 	path = smart-tv-deployer
 	url = https://github.com/comrat/smart-tv-deployer.git
+[submodule "qmlcore-tv"]
+	path = qmlcore-tv
+	url = git@github.com:pureqml/qmlcore-tv.git
