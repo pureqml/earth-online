@@ -17,3 +17,9 @@ git submodule update
 ./qmlcore/build
 ```
 The result will be in `build.web` directory.
+
+## SmartTV deploy
+```
+./smart-tv-deployer/build.py -p TARGET_PLATFORM
+```
+TARGET_PLATFORM - smartTV platform you wont to deploy. It could be webos|netcast|tizen|orsay|androidtv
