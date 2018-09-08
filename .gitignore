@@ -3,3 +3,8 @@ build.*
 *.swp
 *.swn
 *.swo
+*.ipk
+controls
+qmlcore
+qmlcore-tv
+smart-tv-deployer
