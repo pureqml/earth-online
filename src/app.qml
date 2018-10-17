@@ -2,9 +2,11 @@ Item {
 	anchors.fill: context;
 	focus: true;
 
-	YouTube {
+	VideoPlayer {
+		id: player;
 		anchors.fill: parent;
-		source: "https://www.youtube.com/embed/RtU_mdL2vBM?autoplay=1&controls=0&showinfo=0";
+		autoPlay: true;
+		source: "http://iphone-streaming.ustream.tv/uhls/17074538/streams/live/iphone/playlist.m3u8";
 	}
 
 	Osd {
