@@ -31,12 +31,18 @@ Item {
 		onClicked: { osd.toggleActive() }
 	}
 
+	CloseDialog {
+		id: approoveDialog;
+
+		onAccepted: { _globals.closeApp() }
+	}
+
 	onSelectPressed: { osd.toggleActive() }
 
 	onBackPressed: {
 		if (osd.active)
 			osd.toggleActive()
 		else
-			_globals.closeApp()
+			approoveDialog.show()
 	}
 }
