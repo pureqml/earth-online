@@ -31,6 +31,14 @@ Item {
 		onClicked: { osd.toggleActive() }
 	}
 
+	MouseMoveMixin { onMouseMove: { closeIcon.keepAlive() } }
+
+	CloseIcon {
+		id: closeIcon;
+
+		onClicked: { approoveDialog.show() }
+	}
+
 	CloseDialog {
 		id: approoveDialog;
 
