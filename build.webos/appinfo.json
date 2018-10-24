@@ -1,0 +1,17 @@
+{
+	"id": "com.earth-online.app",
+	"version": "1.0.5",
+	"vendor": "Jhon Doe",
+	"type": "web",
+	"main": "index.html",
+	"title": "earth-online",
+	"bgColor": "#333333",
+	"bgImage": "preview.png",
+	"icon": "icon.png",
+	"largeIcon": "icon.png",
+	"resolution":"1280x720",
+	"iconColor": "#333333",
+	"splashBackground": "splash.png",
+	"disableBackHistoryAPI":true,
+	"uiRevision":1
+}
