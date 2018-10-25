@@ -2,6 +2,7 @@ WebItem {
 	id: osdProto;
 	property bool active: false;
 	property bool mobile: context.system.device == System.Mobile;
+	property bool networkProblems: request.networkProblems;
 	width: mobile && !active ? 50 : context.width;
 	height: mobile && !active ? 50 : context.height;
 	anchors.top: parent.top;

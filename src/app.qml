@@ -30,6 +30,16 @@ Item {
 		onClicked: { osd.toggleActive() }
 	}
 
+	Text {
+		anchors.top: parent.top;
+		anchors.left: parent.left;
+		anchors.margins: 10;
+		text: "CONNECTION PROBREMS";
+		font.pixelSize: 24;
+		color: "#F44336";
+		visible: osd.networkProblems;
+	}
+
 	MouseMoveMixin { onMouseMove: { closeIcon.keepAlive() } }
 
 	CloseIcon {
