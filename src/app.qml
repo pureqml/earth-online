@@ -62,4 +62,22 @@ Item {
 		else
 			approoveDialog.show()
 	}
+
+	onCompleted: {
+		this._context.document.on('visibilitychange', function() {
+			log("app visibility", document.hidden)
+			if (document.hidden) {
+				// player.pause()
+			} else {
+				// player.play()
+				if (window.webapis && window.webapis.appcommon) {
+					window.webapis.appcommon.setScreenSaver(
+						window.webapis.appcommon.AppCommonScreenSaverState.SCREEN_SAVER_OFF,
+						function(result) { log("Turn scrren saver off success", result); },
+						function(error) { log("Failed to turn screen saver off", JSON.stringify(error)); }
+					);
+				}
+			}
+		});
+	}
 }
