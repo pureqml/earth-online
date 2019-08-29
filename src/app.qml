@@ -2,10 +2,11 @@ Item {
 	anchors.fill: context;
 	focus: true;
 
-	YouTube {
+	VideoPlayer {
 		id: player;
 		anchors.fill: parent;
-		source: "https://www.youtube.com/embed/ddFvjfvPnqk?autoplay=1&controls=0&showinfo=0&cc_load_policy=3&mute=1";
+		autoPlay: true;
+		source: "http://iphone-streaming.ustream.tv/uhls/17074538/streams/live/iphone/playlist.m3u8";
 	}
 
 	Osd {
@@ -67,9 +68,9 @@ Item {
 		this._context.document.on('visibilitychange', function() {
 			log("app visibility", document.hidden)
 			if (document.hidden) {
-				// player.pause()
+				player.pause()
 			} else {
-				// player.play()
+				player.play()
 				if (window.webapis && window.webapis.appcommon) {
 					window.webapis.appcommon.setScreenSaver(
 						window.webapis.appcommon.AppCommonScreenSaverState.SCREEN_SAVER_OFF,
