@@ -2,7 +2,7 @@
 	"platforms": ["web"],
 	"properties": {
 		"title": "earthonline",
-		"version": "1.0.8",
+		"version": "1.0.9",
 		"iconColor": "#333333",
 		"style.font": { "family": "Space Mono" }
 	},
