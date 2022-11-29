@@ -5,7 +5,7 @@ Item {
 	YouTube {
 		id: player;
 		anchors.fill: parent;
-		source: "https://www.youtube.com/embed/86YLFOog4GM?autoplay=1&controls=0&showinfo=0&cc_load_policy=3";
+		source: "https://www.youtube.com/embed/ddZu_1Z3BAc?autoplay=1&controls=0&showinfo=0&cc_load_policy=3";
 	}
 
 	Osd {
