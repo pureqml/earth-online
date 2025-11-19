@@ -2,10 +2,10 @@ Item {
 	anchors.fill: context;
 	focus: true;
 
-	YouTube {
+	YouTubePlayer {
 		id: player;
 		anchors.fill: parent;
-		source: "https://www.youtube.com/embed/gvpXSDt5MbI?autoplay=1&controls=0&showinfo=0&cc_load_policy=3";
+		source: "gvpXSDt5MbI";
 	}
 
 	Osd {
